@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMXamarinApp.Views.FacultyDetailsPage" Title="Информация о факультете">
+    <StackLayout>
+        <StackLayout>
+            <Label Text="Название"/>
+            <Entry Text="{Binding Name}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button Text="Сохранить" Command="{Binding FacultyListViewModel.SaveFacultyCommand}" CommandParameter="{Binding}"/>
+            <Button Text="Удалить" Command="{Binding FacultyListViewModel.DeleteFacultyCommand}" CommandParameter="{Binding}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

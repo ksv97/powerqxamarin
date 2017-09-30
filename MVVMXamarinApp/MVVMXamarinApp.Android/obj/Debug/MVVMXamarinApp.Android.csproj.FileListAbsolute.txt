@@ -1,0 +1,1 @@
+D:\VS 2017 Projects\MVVMXamarinApp\MVVMXamarinApp\MVVMXamarinApp.Android\obj\Debug\MVVMXamarinApp.Android.csprojResolveAssemblyReference.cache

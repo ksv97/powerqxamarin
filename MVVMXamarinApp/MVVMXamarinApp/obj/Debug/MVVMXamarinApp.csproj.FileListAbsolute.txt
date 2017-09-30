@@ -1,0 +1,2 @@
+D:\VS 2017 Projects\MVVMXamarinApp\MVVMXamarinApp\MVVMXamarinApp\obj\Debug\MVVMXamarinApp.csprojResolveAssemblyReference.cache
+D:\VS 2017 Projects\MVVMXamarinApp\MVVMXamarinApp\MVVMXamarinApp\obj\Debug\MVVMXamarinApp.csproj.CoreCompileInputs.cache

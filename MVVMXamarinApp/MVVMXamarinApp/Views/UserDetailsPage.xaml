@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMXamarinApp.Views.UserDetailsPage"
+             Title="User details">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Double x:Key="fontSize">16</x:Double>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid Padding="15, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Name: "  Grid.Row="0" Grid.Column="0" FontSize="{StaticResource fontSize}"></Label>
+        <Label Text="{Binding Path=FullName}" FontSize="{StaticResource fontSize}" Grid.Row="0" Grid.Column="1"></Label>
+
+        <Label Text="Position: " FontSize="{StaticResource fontSize}" Grid.Row="1" Grid.Column="0">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+            </Label.GestureRecognizers>
+        </Label>
+        <Entry x:Name="PositionLabel" Focused="PositionLabel_Focused" Text="{Binding Path=UserType.Name}" FontSize="{StaticResource fontSize}" Grid.Row="1" Grid.Column="1"/>
+        <Picker x:Name="PositionPicker" Title="Select user's position"  IsVisible="False" SelectedIndexChanged="PositionPicker_SelectedIndexChanged"></Picker>
+        
+    </Grid>
+</ContentPage>

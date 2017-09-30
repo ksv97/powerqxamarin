@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMXamarinApp.LoginView" Title="PowerQ" WidthRequest="20" Padding="20">
+    
+    <StackLayout Spacing="20" Padding="50" VerticalOptions="Center">
+        <Entry Placeholder="Имя пользователя" Text="{Binding Path=Login}"/>
+        <Entry Placeholder="Пароль" Text="{Binding Path=Password}" IsPassword="True"/>
+        <Button x:Name="LoginBtn" FontSize="Small" Text="Войти" Clicked="TryLogIn" />
+        <Button x:Name="RegisterBtn" FontSize="Small" Text="Зарегистрироваться" Clicked="GoToRegistrationPage"/>
+        <Label TextColor="Red" FontSize="Small" Text="Неверное имя пользователя или пароль!" IsVisible="False"/>
+    </StackLayout>
+    
+</ContentPage>

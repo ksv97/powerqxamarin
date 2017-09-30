@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMXamarinApp.Views.UsersPage" Title="Пользователи">
+    <ListView x:Name="UsersView"  ItemSelected="UsersView_ItemSelected">
+        <ListView.Header>
+            <Label HorizontalOptions="Center" FontSize="Large">Пользователи системы</Label>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding FullName}" Detail="{Binding UserType.Name}" TextColor="GreenYellow" DetailColor="LightGray"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
